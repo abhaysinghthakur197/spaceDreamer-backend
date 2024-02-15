@@ -20,7 +20,7 @@ const articleRoute = require('./routes/article')
 const cors = require('cors')
 
 const app = express();
-const port = process.evn.PORT || 8000;
+const port = process.env.PORT || 8000;
 
 app.use(cors({ origin: true, credentials: true }));
 
