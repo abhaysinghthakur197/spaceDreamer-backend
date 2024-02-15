@@ -20,7 +20,7 @@ const articleRoute = require('./routes/article')
 const cors = require('cors')
 
 const app = express();
-const PORT = process.evn.PORT || 8000;
+const port = process.evn.PORT || 8000;
 
 app.use(cors({ origin: true, credentials: true }));
 
@@ -52,6 +52,6 @@ app.use("/api/article", articleRoute)
 
 
 
-app.listen(PORT, () => {
-    console.log(`server is running on ${PORT}`)
+app.listen(port, () => {
+    console.log(`server is running on ${port}`)
 })
