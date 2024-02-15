@@ -14,7 +14,11 @@ const Users = require('./models/user')
 const userRoute = require('./routes/user')
 const articleRoute = require('./routes/article')
 
-
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://main--spacedreamer.netlify.app');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 // Adding cors for getting the req
 const cors = require('cors')
