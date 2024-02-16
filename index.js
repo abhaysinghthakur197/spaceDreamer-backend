@@ -20,7 +20,7 @@ const articleRoute = require('./routes/article')
 const cors = require('cors')
 
 const app = express();
-const PORT = process.evn.PORT || 8000;
+const port = process.env.PORT || 8000;
 
 app.use(cors({ origin: true, credentials: true }));
 
@@ -41,10 +41,10 @@ app.use('/articleCoverImage', express.static(path.join(__dirname, 'public', 'art
 
 
 app.get("/api", async (req, res) => {
-        const allArticle = await Articles.find({})
-        // const allUsers = await Users.find({})
-        // const allData = {allArticle, allUsers}
-    res.status(200).json(allArticle)
+    const allArticle = await Articles.find({})
+    // const allUsers = await Users.find({})
+    // const allData = {allArticle, allUsers}
+    res.json(allArticle)
 })
 
 app.use("/api/user", userRoute)
@@ -52,6 +52,6 @@ app.use("/api/article", articleRoute)
 
 
 
-app.listen(PORT, () => {
-    console.log(`server is running on ${PORT}`)
+app.listen(port, () => {
+    console.log(`server is running on ${port}`)
 })

@@ -4,8 +4,7 @@
   "description": "\"Full Stack MERN Project",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "npm install"
+    "start": "node index.js"
   },
   "author": "Abhay Thakur",
   "license": "MIT",
