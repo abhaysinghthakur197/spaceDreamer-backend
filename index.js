@@ -21,15 +21,14 @@ const cors = require('cors')
 
 const app = express();
 const port = process.env.PORT || 8000;
-<<<<<<< HEAD
-=======
+
 
 // app.use((req, res, next) => {
 //   res.header('Access-Control-Allow-Origin', 'https://main--spacedreamer.netlify.app');
 //   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 //   next();
 // });
->>>>>>> 92abecaf65c0235bfe2131a8dc914937d82840d0
+
 
 app.use(cors({ origin: true, credentials: true }));
 
@@ -63,8 +62,7 @@ app.use("/api/article", articleRoute)
 
 app.listen(port, () => {
     console.log(`server is running on ${port}`)
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> 92abecaf65c0235bfe2131a8dc914937d82840d0
+
+
+
