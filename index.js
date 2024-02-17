@@ -33,7 +33,7 @@ const port = process.env.PORT || 8000;
 app.use(cors({ origin: true, credentials: true }));
 
 //  connect mongodb
-connectToMongoDB("mongodb://127.0.0.1:27017/SpaceDreamer-app").then(() => console.log("Db connected")).catch((e) => console.log(e));
+connectToMongoDB("mongodb+srv://webconceit:Webconceit@321@spacecluster.bs04zfu.mongodb.net/?retryWrites=true&w=majority").then(() => console.log("Db connected")).catch((e) => console.log(e));
 
 // middleware
 app.use(express.json());
