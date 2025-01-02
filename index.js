@@ -33,7 +33,8 @@ const port = process.env.PORT || 8000;
 app.use(cors({ origin: true, credentials: true }));
 
 //  connect mongodb
-connectToMongoDB("mongodb+srv://webconceit:Webconceit%40321@spacecluster.bs04zfu.mongodb.net/?retryWrites=true&w=majority").then(() => console.log("Db connected")).catch((e) => console.log(e));
+//connectToMongoDB("mongodb+srv://webconceit:Webconceit%40321@spacecluster.bs04zfu.mongodb.net/?retryWrites=true&w=majority").then(() => console.log("Db connected")).catch((e) => console.log(e));
+connectToMongoDB("mongodb+srv://spacedreamer2:Abhay%23123@cluster0.d7aws.mongodb.net/").then(() => console.log("DB connected")).catch((e) => console.log(e));
 
 // middleware
 app.use(express.json());
@@ -49,10 +50,11 @@ app.use('/articleCoverImage', express.static(path.join(__dirname, 'public', 'art
 
 
 app.get("/api", async (req, res) => {
-    const allArticle = await Articles.find({})
+    // const allArticle = await Articles.find({})
     // const allUsers = await Users.find({})
     // const allData = {allArticle, allUsers}
-    res.json(allArticle)
+    // res.json(allArticle)
+    res.status(200).json({message: "all good"})
 })
 
 app.use("/api/user", userRoute)
